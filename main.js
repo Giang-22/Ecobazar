@@ -13,3 +13,14 @@ function Searchin(){
         }
     }
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const aboutLink = document.querySelector('a[href="#about"]');
+    const aboutSection = document.getElementById("about-us");
+    if (aboutLink && aboutSection) {
+        aboutLink.addEventListener("click", function (e) {
+            e.preventDefault();
+            aboutSection.style.display = "grid";
+            aboutSection.scrollIntoView({ behavior: "smooth" });
+        });
+    }
+});
